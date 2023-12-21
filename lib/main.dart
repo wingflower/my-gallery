@@ -58,7 +58,7 @@ class _MyGalleryAppState extends State<MyGalleryApp> {
           : PageView(
               children: images!.map((image) {
                 return FutureBuilder<Uint8List>(
-                    future: images![0].readAsBytes(),
+                    future: image.readAsBytes(),
                     builder: (context, snapshot) {
                       final data = snapshot.data;
 
